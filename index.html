@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Abdullah Al Shahab - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- html2pdf library for one-click PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+    <!-- Action Buttons (Hidden during PDF generation) -->
+    <div class="top-controls no-print">
+        <button id="theme-toggle" class="btn outline">Toggle Theme</button>
+        <button id="download-pdf" class="btn primary">Generate CV PDF</button>
+    </div>
+
+    <!-- The content to be converted into a PDF -->
+    <div class="container" id="cv-content">
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="profile-pic">
+                <!-- Replace with your actual image path on GitHub -->
+                <img src="your-picture-filename.jpg" alt="Md. Abdullah Al Shahab">
+            </div>
+            <div class="header-info">
+                <h1>Md. Abdullah Al Shahab</h1>
+                <h2>Electrical & Electronic Engineering Student</h2>
+                <p>Signal Processing · AI-based Device Modeling · VLSI Design</p>
+                <div class="contact-links">
+                    <a href="mailto:shahab.eee.22@gmail.com">shahab.eee.22@gmail.com</a> | 
+                    <span>+880 1647219901</span> |
+                    <a href="https://www.linkedin.com/in/md-abdullah-al-shahab-0a532a350/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="grid-layout">
+            
+            <!-- Left Column -->
+            <aside class="sidebar">
+                <section class="card">
+                    <h3>Education</h3>
+                    <div class="timeline-item">
+                        <h4>B.Sc. in EEE</h4>
+                        <p class="institution">RUET</p>
+                        <p class="details">CGPA: 3.88/4.00 (After 4 Semesters)</p>
+                        <p class="date">Session: 2022–2023</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Higher Secondary</h4>
+                        <p class="institution">Rajshahi Collegiate</p>
+                        <p class="details">GPA: 5.00/5.00</p>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h3>Skills</h3>
+                    <div class="skills-category">
+                        <strong>Technical:</strong>
+                        <div class="tags">
+                            <span class="tag">MATLAB</span>
+                            <span class="tag">C</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">AutoCAD</span>
+                            <span class="tag">Microwind</span>
+                            <span class="tag">PSpice</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <strong>Soft Skills:</strong>
+                        <div class="tags">
+                            <span class="tag">Content Writing</span>
+                            <span class="tag">Leadership</span>
+                            <span class="tag">Critical Thinking</span>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+
+            <!-- Right Column -->
+            <div class="main-content">
+                <section class="card">
+                    <h3>About Me</h3>
+                    <p>Academically strong EEE student at RUET with a keen interest in signal processing and AI-based device modelling. Experienced in combining hands-on EEE tools and programming with leadership roles in organizing tech events and competitions.</p>
+                </section>
+
+                <section class="card">
+                    <h3>Experience & Projects</h3>
+                    
+                    <div class="timeline-item">
+                        <h4>Industrial Attachment</h4>
+                        <p class="institution">Nural Semiconductor Ltd</p>
+                        <p class="details">Focus: VLSI design and development.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Precision Farming Using ESP32</h4>
+                        <p class="institution">Project</p>
+                        <p class="details">A Multi-Sensor Approach to Automated Fertilizer Recommendation. Development of a multi-sensor system for optimized farming practices.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Robotics & LFR</h4>
+                        <p class="institution">Competition Participation</p>
+                        <p class="details">Participated in RUET student competitions involving Line Following Robots.</p>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h3>Achievements & Activities</h3>
+                    <ul class="bullet-list">
+                        <li><strong>First Prize:</strong> Content Writing, RCF Career Forum.</li>
+                        <li><strong>Global Case Competition Winner:</strong> ISCEA Prize (70% scholarship).</li>
+                        <li><strong>Lead of Content Team:</strong> RUET CORE (Hosted podcast series).</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

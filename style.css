@@ -1,0 +1,243 @@
+/* Custom Properties / Variables */
+:root {
+    --bg-color: #0f1724;
+    --text-color: #e6eef6;
+    --card-bg: #1e293b;
+    --accent-color: #0ea5a4;
+    --muted-color: #9aa4b2;
+    --border-radius: 12px;
+}
+
+/* Light Mode Variables */
+[data-theme="light"] {
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+    --card-bg: #ffffff;
+    --accent-color: #0d9488;
+    --muted-color: #64748b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 2rem 1rem;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+}
+
+/* Controls (Buttons) */
+.top-controls {
+    max-width: 1000px;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn.primary {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.btn.outline {
+    background-color: transparent;
+    border: 1px solid var(--muted-color);
+    color: var(--text-color);
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent-color);
+    flex-shrink: 0;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-info h1 {
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+}
+
+.header-info h2 {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.header-info p {
+    color: var(--muted-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-links a, .contact-links span {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+.contact-links a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Grid Layout */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Timeline / Content Items */
+.timeline-item {
+    margin-bottom: 1.2rem;
+}
+
+.timeline-item h4 {
+    font-size: 1.05rem;
+}
+
+.institution {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.details {
+    font-size: 0.9rem;
+    color: var(--muted-color);
+}
+
+/* Tags / Skills */
+.skills-category {
+    margin-bottom: 1rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tag {
+    background-color: rgba(14, 165, 164, 0.1);
+    color: var(--accent-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.bullet-list {
+    list-style-position: inside;
+    color: var(--text-color);
+}
+
+.bullet-list li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* PRINT MEDIA QUERIES (For PDF Generation) */
+@media print {
+    body, .container {
+        background-color: white !important;
+        color: black !important;
+        padding: 0 !important;
+    }
+    .no-print {
+        display: none !important;
+    }
+    .card, .header {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+    .tag {
+        border: 1px solid #ccc;
+        background-color: transparent !important;
+        color: black !important;
+    }
+    * {
+        color: black !important;
+    }
+    .header-info h2, .institution {
+        color: #333 !important;
+    }
+}
